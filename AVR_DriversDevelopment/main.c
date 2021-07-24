@@ -6,37 +6,35 @@
  */ 
 
 
-#include "MCAL/Gpt Module/Gpt.h"
-#include "MCAL/Dio Module/Dio.h"
-#include "MCAL/SWPwm Module/SWPwm.h"
 
-#include "ECUAL/Button Module/Button.h"
-#include "ECUAL/Motor Module/Motor.h"
+
+#include "ECUAL/Keypad Module/Keypad.h"
+#include "ECUAL/Lcd Module/Lcd.h"
+#include "ECUAL/Terminal Module/Terminal.h"
+#include "MCAL/Delay Module/Delay.h"
 int main(void)
 {
-	GptInit();
-	Dio_init(strDio_pins);
-	
-	EnableGlbl_Interrupt();
-	uint8_t u8_buttonValue=0;
-	
-	Dio_writePin(DIO_LED1_CHANNEL_ID, PIN_HIGH);
-	
-	while(1)
+	Keypad_init();
+	Terminal_init();
+	Lcd_init();
+	uint8_t u8_KeyPressed[2]={0};
+	u8_KeyPressed[1]='\0';
+	enuKeypad_Status_t enu_KeypadStatus=0;
+	while (1)
 	{
-		Button_updateState(BUTTON_1_M);
-		Button_getState(BUTTON_1_M, &u8_buttonValue);
 		
-		if(u8_buttonValue == BUTTON_STATE_PRESSED)
+		enu_KeypadStatus = Keypad_readKey(u8_KeyPressed);
+		if(enu_KeypadStatus == KEYPAD_STATUS_PRESSED)
 		{
-			Motor_run(MOTOR_RIGHT_ID,60,MOTOR_DIR_CLK_WISE);
-			Motor_stop(MOTOR_LEFT_ID);
-		}
-		else
+			Terminal_Out(u8_KeyPressed);
+			Lcd_setCursor(1,0);
+			Lcd_printChar(u8_KeyPressed[0]);
+			Lcd_setCursor(0,0);
+			Lcd_printString((uint8_t*)"Keypad Feedback");
+		}else if(enu_KeypadStatus == KEYPAD_STATUS_NOT_PRESSED)
 		{
-			Motor_run(MOTOR_LEFT_ID,60,MOTOR_DIR_CLK_WISE);
-			Motor_stop(MOTOR_RIGHT_ID);
+			
 		}
-		
+		Delay_ms(200);
 	}
 }

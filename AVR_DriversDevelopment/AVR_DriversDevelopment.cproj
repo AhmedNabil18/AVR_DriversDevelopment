@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
-    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <ProjectGuid>{dce6c7e3-ee26-4d79-826b-08594b9ad897}</ProjectGuid>
     <avrdevice>ATmega32</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
@@ -126,7 +126,52 @@
     <Compile Include="ECUAL\Button Module\Button.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ECUAL\Button Module\Button_Cfg.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="ECUAL\Button Module\Button_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Eeprom_I2C Module\Eeprom_24.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Eeprom_I2C Module\Eeprom_24.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Eeprom_I2C Module\Eeprom_24_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Keypad Module\Keypad.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Keypad Module\Keypad.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Keypad Module\Keypad_Cfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Keypad Module\Keypad_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Lcd Module\Lcd.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Lcd Module\Lcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Lcd Module\Lcd_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Led Module\Led.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Led Module\Led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Led Module\Led_Cfg.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Led Module\Led_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="ECUAL\Motor Module\Motor.c">
@@ -141,6 +186,15 @@
     <Compile Include="ECUAL\Motor Module\Motor_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="ECUAL\Terminal Module\Terminal.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Terminal Module\Terminal.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ECUAL\Terminal Module\Terminal_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
@@ -148,6 +202,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\ATMega32_Registers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Delay Module\Delay.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Delay Module\Delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Delay Module\Delay_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\Dio Module\Dio.c">
@@ -181,7 +244,28 @@
     <Compile Include="MCAL\Gpt Module\Gpt_Symbols.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\I2C Module\I2C.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\I2C Module\I2C.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\I2C Module\I2C_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="MCAL\Platform_Types.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Spi Module\Spi.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Spi Module\Spi.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Spi Module\Spi_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Spi Module\Spi_Symbols.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MCAL\SWPwm Module\SWPwm.c">
@@ -196,13 +280,40 @@
     <Compile Include="MCAL\SWPwm Module\SWPwm_Cfg.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MCAL\Uart Module\Uart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Uart Module\Uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Uart Module\Uart_Cfg.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MCAL\Uart Module\Uart_Symbols.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="StringManipulation.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="StringManipulation.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ECUAL\Button Module" />
+    <Folder Include="ECUAL\Eeprom_I2C Module\" />
+    <Folder Include="ECUAL\Lcd Module\" />
+    <Folder Include="ECUAL\Led Module\" />
     <Folder Include="ECUAL\Motor Module" />
+    <Folder Include="ECUAL\Keypad Module" />
+    <Folder Include="ECUAL\Terminal Module\" />
     <Folder Include="MCAL" />
     <Folder Include="MCAL\Gpt Module\" />
     <Folder Include="MCAL\Dio Module" />
+    <Folder Include="MCAL\I2C Module" />
+    <Folder Include="MCAL\Delay Module" />
+    <Folder Include="MCAL\Spi Module" />
+    <Folder Include="MCAL\Uart Module" />
     <Folder Include="MCAL\SWPwm Module" />
     <Folder Include="ECUAL" />
   </ItemGroup>

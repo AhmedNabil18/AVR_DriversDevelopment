@@ -1,69 +1,67 @@
-main.d main.o: .././main.c .././MCAL/Gpt\ Module/Gpt.h \
- .././MCAL/Gpt\ Module/Gpt_Cfg.h .././MCAL/Gpt\ Module/Gpt_Symbols.h \
- .././MCAL/Gpt\ Module/..\Platform_Types.h \
- .././MCAL/Gpt\ Module/..\ATMega32_Interrupts.h \
- .././MCAL/Gpt\ Module/..\ATMega32_Registers.h \
- .././MCAL/Gpt\ Module/..\Platform_Types.h .././MCAL/Dio\ Module/Dio.h \
- .././MCAL/Dio\ Module/Dio_Cfg.h \
- .././MCAL/Dio\ Module/..\ATMega32_Registers.h \
- .././MCAL/Dio\ Module/..\Platform_Types.h \
- .././MCAL/SWPwm\ Module/SWPwm.h \
- .././MCAL/SWPwm\ Module/..\Platform_Types.h \
- .././MCAL/SWPwm\ Module/SWPwm_Cfg.h \
- .././MCAL/SWPwm\ Module/..\Gpt\ Module\Gpt_Cfg.h \
- .././MCAL/SWPwm\ Module/..\Dio\ Module\Dio_Cfg.h \
- .././ECUAL/Button\ Module/Button.h \
- .././ECUAL/Button\ Module/Button_Cfg.h \
- .././ECUAL/Button\ Module/..\..\MCAL\Dio\ Module\Dio.h \
- .././ECUAL/Button\ Module/../../MCAL/Dio\ Module/Dio.h \
- .././ECUAL/Motor\ Module/Motor.h .././ECUAL/Motor\ Module/Motor_Cfg.h \
- .././ECUAL/Motor\ Module/../../MCAL/Dio\ Module/Dio.h \
- .././ECUAL/Motor\ Module/../../MCAL/SWPwm\ Module/SWPwm.h
+main.d main.o: .././main.c .././ECUAL/Keypad\ Module/Keypad.h \
+ .././ECUAL/Keypad\ Module/Keypad_Cfg.h \
+ .././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\Dio.h \
+ .././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\Dio_Cfg.h \
+ .././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\..\ATMega32_Registers.h \
+ .././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\..\Platform_Types.h \
+ .././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\..\Platform_Types.h \
+ .././ECUAL/Lcd\ Module/Lcd.h .././ECUAL/Lcd\ Module/Lcd_Cfg.h \
+ .././ECUAL/Lcd\ Module/..\..\MCAL\Dio\ Module\Dio.h \
+ .././ECUAL/Terminal\ Module/Terminal.h \
+ .././ECUAL/Terminal\ Module/Terminal_Cfg.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/Uart.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/Uart_Cfg.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/..\Platform_Types.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/Uart_Symbols.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/..\ATMega32_Interrupts.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/..\ATMega32_Registers.h \
+ .././ECUAL/Terminal\ Module/../../StringManipulation.h \
+ .././ECUAL/Terminal\ Module/../../MCAL/Platform_Types.h \
+ .././MCAL/Delay\ Module/Delay.h .././MCAL/Delay\ Module/Delay_Cfg.h \
+ .././MCAL/Delay\ Module/../Platform_Types.h
 
-.././MCAL/Gpt\ Module/Gpt.h:
+.././ECUAL/Keypad\ Module/Keypad.h:
 
-.././MCAL/Gpt\ Module/Gpt_Cfg.h:
+.././ECUAL/Keypad\ Module/Keypad_Cfg.h:
 
-.././MCAL/Gpt\ Module/Gpt_Symbols.h:
+.././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\Dio.h:
 
-.././MCAL/Gpt\ Module/..\Platform_Types.h:
+.././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\Dio_Cfg.h:
 
-.././MCAL/Gpt\ Module/..\ATMega32_Interrupts.h:
+.././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\..\ATMega32_Registers.h:
 
-.././MCAL/Gpt\ Module/..\ATMega32_Registers.h:
+.././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\..\Platform_Types.h:
 
-.././MCAL/Gpt\ Module/..\Platform_Types.h:
+.././ECUAL/Keypad\ Module/..\..\MCAL\Dio\ Module\..\Platform_Types.h:
 
-.././MCAL/Dio\ Module/Dio.h:
+.././ECUAL/Lcd\ Module/Lcd.h:
 
-.././MCAL/Dio\ Module/Dio_Cfg.h:
+.././ECUAL/Lcd\ Module/Lcd_Cfg.h:
 
-.././MCAL/Dio\ Module/..\ATMega32_Registers.h:
+.././ECUAL/Lcd\ Module/..\..\MCAL\Dio\ Module\Dio.h:
 
-.././MCAL/Dio\ Module/..\Platform_Types.h:
+.././ECUAL/Terminal\ Module/Terminal.h:
 
-.././MCAL/SWPwm\ Module/SWPwm.h:
+.././ECUAL/Terminal\ Module/Terminal_Cfg.h:
 
-.././MCAL/SWPwm\ Module/..\Platform_Types.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/Uart.h:
 
-.././MCAL/SWPwm\ Module/SWPwm_Cfg.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/Uart_Cfg.h:
 
-.././MCAL/SWPwm\ Module/..\Gpt\ Module\Gpt_Cfg.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/..\Platform_Types.h:
 
-.././MCAL/SWPwm\ Module/..\Dio\ Module\Dio_Cfg.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/Uart_Symbols.h:
 
-.././ECUAL/Button\ Module/Button.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/..\ATMega32_Interrupts.h:
 
-.././ECUAL/Button\ Module/Button_Cfg.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Uart\ Module/..\ATMega32_Registers.h:
 
-.././ECUAL/Button\ Module/..\..\MCAL\Dio\ Module\Dio.h:
+.././ECUAL/Terminal\ Module/../../StringManipulation.h:
 
-.././ECUAL/Button\ Module/../../MCAL/Dio\ Module/Dio.h:
+.././ECUAL/Terminal\ Module/../../MCAL/Platform_Types.h:
 
-.././ECUAL/Motor\ Module/Motor.h:
+.././MCAL/Delay\ Module/Delay.h:
 
-.././ECUAL/Motor\ Module/Motor_Cfg.h:
+.././MCAL/Delay\ Module/Delay_Cfg.h:
 
-.././ECUAL/Motor\ Module/../../MCAL/Dio\ Module/Dio.h:
-
-.././ECUAL/Motor\ Module/../../MCAL/SWPwm\ Module/SWPwm.h:
+.././MCAL/Delay\ Module/../Platform_Types.h:

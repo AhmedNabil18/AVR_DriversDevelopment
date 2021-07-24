@@ -15,7 +15,6 @@
 #include "../../MCAL/Dio Module/Dio.h"
 #include "../../MCAL/SWPwm Module/SWPwm.h"
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 /*-*-*-*-*- CONSTANTS -*-*-*-*-*-*/
 #define MOTOR_DIR_CLK_WISE				0U
@@ -41,7 +40,10 @@ typedef enum
 	MOTOR_STATUS_ERROR_OK,
 	MOTOR_STATUS_ERROR_ID_INVALID,
 	MOTOR_STATUS_ERROR_SPD_INVALID,
-	MOTOR_STATUS_ERROR_DIR_INVALID
+	MOTOR_STATUS_ERROR_DIR_INVALID,
+	MOTOR_STATUS_ERROR_RUNNING,
+	MOTOR_STATUS_INIT,
+	MOTOR_STATUS_UNINIT
 }enuMotor_Status_t;
 
 /*

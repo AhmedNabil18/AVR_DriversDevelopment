@@ -11,9 +11,10 @@
 #include "Platform_Types.h"
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 /*-*-*-*-*- FUNCTION-LIKE MACROS -*-*-*-*-*/
-#define REG_SET_BIT(Reg, pinNum)		((Reg) |= (1<<pinNum))
-#define REG_CLR_BIT(Reg, pinNum)		((Reg) &= ~(1<<pinNum))
-
+#define REG_SET_BIT(Reg, pinNum)			((Reg) |= (1<<pinNum))
+#define REG_CLR_BIT(Reg, pinNum)			((Reg) &= ~(1<<pinNum))
+#define BIT_IS_SET(Reg,pinNum)				(Reg & (1<<pinNum))
+#define BIT_IS_CLR(Reg,pinNum)				(!(Reg & (1<<pinNum)))
 /*-* PIN NUMBERS *-*/
 #define PIN_0		0
 #define PIN_1		1
@@ -87,5 +88,31 @@
 #define GPT_TCNT2_REG			(*((volatile uint8_t*)(0x44)))
 #define GPT_OCR2_REG			(*((volatile uint8_t*)(0x43)))
 
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-*-*-*- UART REGISTERS -*-*-*-*-*-*-*-*-*-*-*-*/
+#define UART_UDR_REG			(*((volatile uint8_t*)(0x2C)))
+#define UART_UCSRC_REG			(*((volatile uint8_t*)(0x40)))
+#define UART_UBRRH_REG			(*((volatile uint8_t*)(0x40)))
+#define UART_UCSRA_REG			(*((volatile uint8_t*)(0x2B)))
+#define UART_UCSRB_REG			(*((volatile uint8_t*)(0x2A)))
+#define UART_UBRRL_REG			(*((volatile uint8_t*)(0x29)))
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-*-*-*- SPI REGISTERS -*-*-*-*-*-*-*-*-*-*-*-*/
+#define SPI_SPDR_REG			(*((volatile uint8_t*)(0x2F)))
+#define SPI_SPSR_REG			(*((volatile uint8_t*)(0x2E)))
+#define SPI_SPCR_REG			(*((volatile uint8_t*)(0x2D)))
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*-*-*-*-*-*-*-*-*-*-*-*- I2C REGISTERS -*-*-*-*-*-*-*-*-*-*-*-*/
+#define I2C_TWCR_REG			(*((volatile uint8_t*)(0x56)))
+#define I2C_TWDR_REG			(*((volatile uint8_t*)(0x23)))
+#define I2C_TWAR_REG			(*((volatile uint8_t*)(0x22)))
+#define I2C_TWSR_REG			(*((volatile uint8_t*)(0x21)))
+#define I2C_TWBR_REG			(*((volatile uint8_t*)(0x20)))
 
 #endif /* ATMEGA32_REGISTERS_H_ */
